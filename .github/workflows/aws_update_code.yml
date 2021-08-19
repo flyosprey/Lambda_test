@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       AWS_LAMBDA_FUNC_NAME: Hello-World
+      AWS_DEFAULT_REGION: us-east-2
 
     steps:
     - name: checkout
