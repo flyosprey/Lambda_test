@@ -1,0 +1,32 @@
+name: AWS Lambda Deploy V2
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    env:
+      AWS_LAMBDA_FUNC_NAME: Hello-World
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+    - name: Deploy to AWS Lambda
+      run: |
+        aws lambda update-function-code \
+        --function-name ${{ env.AWS_LAMBDA_FUNC_NAME }} \
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
