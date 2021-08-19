@@ -1,2 +1,2 @@
 print('Hello AWS!')
-print('You did it!')
+print('You did it! It was cool')
