@@ -15,4 +15,4 @@ jobs:
           aws_secret_access_key: ${{ secrets.SECRET_ACCESS_KEY }}
           aws_region: ${{ secrets.AWS_REGION }}
           function_name: HelloWorld
-          source: test-work.py
+          source: lambda_function.py
