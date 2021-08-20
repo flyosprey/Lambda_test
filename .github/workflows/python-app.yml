@@ -33,4 +33,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Run code
       run: |
-        python3.9 test-work.py
+        python3.9 lambda_function.py
