@@ -14,5 +14,5 @@ jobs:
           aws_access_key_id: ${{ secrets.ACCESS_KEY_ID }}
           aws_secret_access_key: ${{ secrets.SECRET_ACCESS_KEY }}
           aws_region: ${{ secrets.AWS_REGION }}
-          function_name: hi
+          function_name: HelloWorld
           source: test-work.py
