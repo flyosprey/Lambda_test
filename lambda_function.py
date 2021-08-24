@@ -1,12 +1,4 @@
 import requests
-<<<<<<< HEAD
-def main(event, context):
-    response = requests.get("https://www.test.com/")
-    print(response.text)
-    return response.text
-if __name__ == "__main__":
-    main('', '')
-=======
 from operator import itemgetter
 import json
 
@@ -29,4 +21,3 @@ def lambda_function(event, context):
     titles = [sorted_airtable_records[i]["fields"]["title"] for i in range(len(sorted_airtable_records))]
     
     return json.dumps(titles, ensure_ascii=False)
->>>>>>> f54cba748c6fae0995929f6d7f2c984882da91be
