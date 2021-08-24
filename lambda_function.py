@@ -4,7 +4,7 @@ import json
 
 
 
-def lambda_function(event, context):
+def lambda_handler(event, context):
     api_key = "keylMkRVCV25NxOBl"
     url = "https://api.airtable.com/v0/appW1Vv1p4IHxtiWQ/tblX1jGmYZoqyHrlE"
     headers = {"Authorization": "Bearer " + api_key}
