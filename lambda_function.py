@@ -19,4 +19,4 @@ def lambda_function(event, context):
 
     titles = [sorted_airtable_records[i]["fields"]["title"] for i in range(len(sorted_airtable_records))]
     
-    return json.dumps(titles)
+    return json.dumps(titles, ensure_ascii=False)
