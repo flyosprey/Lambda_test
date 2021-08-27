@@ -15,7 +15,5 @@ jobs:
           aws_secret_access_key: ${{ secrets.SECRET_ACCESS_KEY }}
           aws_region: ${{ secrets.AWS_REGION }}
           function_name: HelloWorld
-          source: lambda_function.py, bin, certifi-2021.5.30.dist-info, certifi, charset_normalizer-2.0.4.dist-info, 
-                  charset_normalizer, idna-3.2.dist-info, idna, requests-2.26.0.dist-info, requests,
-                  urllib3-1.26.6.dist-info, urllib3
+          source: lambda_function.py, libraries, my_classes
 
