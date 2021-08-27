@@ -36,4 +36,4 @@ class BufferOutput:
 
     def output(self):
         time.sleep(1)
-        print(json.dumps(self.deliver.join(self.output_items), ensure_ascii=False))
+        return json.dumps(self.deliver.join(self.output_items), ensure_ascii=False)
