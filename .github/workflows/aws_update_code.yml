@@ -15,5 +15,5 @@ jobs:
           aws_secret_access_key: ${{ secrets.SECRET_ACCESS_KEY }}
           aws_region: ${{ secrets.AWS_REGION }}
           function_name: HelloWorld
-          source: lambda_function.py, libraries
+          source: lambda_function.py, airtable_api.py, buffer_output.py, circular_queue.py, constants.py, libraries
 
