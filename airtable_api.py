@@ -1,6 +1,6 @@
 import requests
 from operator import itemgetter
-from .constants import URL, HEADERS
+from constants import URL, HEADERS
 
 
 class AirTableApi:
