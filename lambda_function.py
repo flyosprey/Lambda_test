@@ -1,5 +1,5 @@
-from my_classes.airtable_api import AirTableApi
-from my_classes.buffer_output import BufferOutput
+from airtable_api import AirTableApi
+from buffer_output import BufferOutput
 
 
 if __name__ == "__main__":
