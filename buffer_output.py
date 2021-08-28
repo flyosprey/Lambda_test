@@ -1,7 +1,7 @@
 import time
 import json
-from .circular_queue import CircularQueue
-from .constants import MAX_BUFFER_SIZE
+from circular_queue import CircularQueue
+from constants import MAX_BUFFER_SIZE
 
 
 class BufferOutput:
