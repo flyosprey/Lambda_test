@@ -1,5 +1,3 @@
-import time
-import json
 from circular_queue import CircularQueue
 from constants import MAX_BUFFER_SIZE
 
@@ -21,9 +19,7 @@ class BufferOutput:
 
         while queue > 0:
             if obj.insert_queue(self.titles[index_title]):
-                self.output_items = obj.return_queue()
-                self.output()
-                self.output_items.clear()
+                self.output_items.append(obj.return_queue())
 
                 obj.remove_queue()
 
@@ -34,6 +30,4 @@ class BufferOutput:
             if index_title == len(self.titles):
                 index_title = 0
 
-    def output(self):
-        time.sleep(1)
-        return json.dumps(self.deliver.join(self.output_items), ensure_ascii=False)
+        return self.output_items
