@@ -1,3 +1,4 @@
+import random
 from circular_queue import CircularQueue
 from constants import MAX_BUFFER_SIZE
 
@@ -6,6 +7,7 @@ class BufferOutput:
 
     def __init__(self, titles):
         self.titles = titles
+        self.len_titles = len(titles)
         self.output_items = []
         self.deliver = " "
 
@@ -14,12 +16,11 @@ class BufferOutput:
             return 'There are no titles'
 
         obj = CircularQueue(MAX_BUFFER_SIZE)
-        queue = 13
         index_title = 0
-
+        queue = random.randint(1, len(self.titles)) 
         while queue > 0:
             if obj.insert_queue(self.titles[index_title]):
-                self.output_items.append(obj.return_queue())
+                self.output_items = obj.return_queue()
 
                 obj.remove_queue()
 
